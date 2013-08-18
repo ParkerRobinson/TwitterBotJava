@@ -14,9 +14,13 @@ public class postTweet {
 	public static void main(String[] args) throws TwitterException
 	{
 		
-		Status status = Main.account.updateStatus(newStatus);
 
 		
+	}
+	
+	public static void createTweet(String tweet) throws TwitterException
+	{
+		Status status = Main.account.updateStatus(tweet);
 	}
 
 

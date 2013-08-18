@@ -10,6 +10,7 @@ public class Main {
 
 
 	public static Twitter account;
+	public static String name;
 	
 	
 
@@ -17,6 +18,10 @@ public class Main {
 	{
 		 account = TwitterFactory.getSingleton();
 		 System.out.println(findTweet.searchTweet());
+		 //Have to add geting the username you want to post at
+		 
+		 
+		 postTweet.createTweet("@" + name + " HAHA! The Falcons are better! #RiseUpATL");
 
 		
 	}
