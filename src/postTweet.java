@@ -6,17 +6,15 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 
 
-public class Main {
+public class postTweet {
+	static String newStatus;
 
 
-	public static Twitter account;
-	
-	
 
 	public static void main(String[] args) throws TwitterException
 	{
-		 account = TwitterFactory.getSingleton();
-		 System.out.println(findTweet.searchTweet());
+		
+		Status status = Main.account.updateStatus(newStatus);
 
 		
 	}
