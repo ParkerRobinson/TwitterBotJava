@@ -17,13 +17,20 @@ public class Main {
 	public static void main(String[] args) throws TwitterException
 	{
 		 account = TwitterFactory.getSingleton();
-		 System.out.println(findTweet.searchTweet());
-		 //Have to add geting the username you want to post at
+		 
+		 findTweet.setSearchField("#whodat");
+		 
+		 System.out.println(findTweet.searchTweet(account));
 		 
 		 
 		 postTweet.createTweet("@" + name + " HAHA! The Falcons are better! #RiseUpATL");
 
 		
+	}
+	
+	public static Twitter getAccount()
+	{
+		return account;
 	}
 
 

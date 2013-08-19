@@ -7,24 +7,23 @@ import twitter4j.TwitterFactory;
 
 
 public class findTweet {
+	static String searchField;
 
 
-
-	public static void main(String[] args) throws TwitterException
-	{
-		 
-		   
-		    
-		  
-
-		
-	}
 	
-	public static QueryResult searchTweet() throws TwitterException
+	public static QueryResult searchTweet(Twitter a) throws TwitterException
 	{
-		Query query = new Query("#whodat");
-	    QueryResult result = Main.account.search(query);
+		Query query = new Query(searchField);
+	    QueryResult result = a.search(query);
 		return result;
+	}
+	public static void setSearchField(String a)
+	{
+		searchField = a;
+	}
+	public static String getSearchField()
+	{
+		return searchField;
 	}
 
 
