@@ -7,21 +7,22 @@ import twitter4j.TwitterFactory;
 
 
 public class postTweet {
-	static String newStatus;
-
-
-
-	public static void main(String[] args) throws TwitterException
+	static Twitter account;
+	static String username;
+	static String[] response;
+	
+	public postTweet(Twitter a, String b)
 	{
-		
-
-		
+		account = a;
+		username = b;
 	}
 	
-	public static void createTweet(String tweet) throws TwitterException
+	public void createStatus() throws TwitterException
 	{
-		Status status = Main.account.updateStatus(tweet);
+		Status status = account.updateStatus("@" + username + " I'm sorry but the Falcons are soo much better.#riseup");
+		System.out.println("Posted the Tweet");
 	}
+
 
 
 }
